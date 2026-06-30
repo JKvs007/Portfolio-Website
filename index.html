@@ -1,0 +1,442 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Jayakrishnan V S | Research &amp; Dev Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#000000",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#131b2e",
+                        "secondary-container": "#d5e3fd",
+                        "inverse-primary": "#bec6e0",
+                        "on-surface-variant": "#45464d",
+                        "primary-fixed": "#dae2fd",
+                        "surface-container": "#eceef0",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#41474e",
+                        "primary-fixed-dim": "#bec6e0",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-fixed-variant": "#3a485c",
+                        "on-secondary-container": "#57657b",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#0d1c2f",
+                        "secondary-fixed-dim": "#b9c7e0",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-container": "#7e848c",
+                        "secondary": "#515f74",
+                        "on-primary-container": "#7c839b",
+                        "surface-container-high": "#e6e8ea",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#161c22",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e0e3e5",
+                        "primary-container": "#131b2e",
+                        "surface-bright": "#f7f9fb",
+                        "tertiary": "#000000",
+                        "on-background": "#191c1e",
+                        "on-surface": "#191c1e",
+                        "inverse-on-surface": "#eff1f3",
+                        "inverse-surface": "#2d3133",
+                        "surface-tint": "#565e74",
+                        "background": "#f7f9fb",
+                        "tertiary-fixed-dim": "#c1c7cf",
+                        "tertiary-container": "#161c22",
+                        "outline-variant": "#c6c6cd",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#dde3eb",
+                        "secondary-fixed": "#d5e3fd",
+                        "surface-container-low": "#f2f4f6",
+                        "outline": "#76777d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1140px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["\"Source Serif 4\""],
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "headline-lg-mobile": ["\"Source Serif 4\""]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .bento-card {
+            background-color: #ffffff;
+            border: 1px solid #E2E8F0;
+            transition: all 0.2s ease-in-out;
+        }
+        .bento-card:hover {
+            background-color: #F8FAFC;
+        }
+        .skill-chip {
+            background-color: #F1F5F9;
+            border: 1px solid #E2E8F0;
+        }
+        .custom-bullet {
+            width: 4px;
+            height: 4px;
+            background-color: #000000;
+            margin-right: 12px;
+            flex-shrink: 0;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant">
+<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">Jayakrishnan V S</div>
+<div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+<a class="text-primary border-b-2 border-primary pb-1 transition-colors" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#experience">Experience</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#skills">Skills</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#education">Education</a>
+</div>
+<a href="https://drive.google.com/uc?export=download&id=1wtTm51sM9qV7ezHMra-Nk0KBJxVbON0Y" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity inline-block text-center whitespace-nowrap">
+                Download Resume
+            </a>
+</nav>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-gutter py-section-gap flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 text-center md:text-left">
+<h1 class="font-headline-lg text-headline-lg mb-4 hidden md:block">Jayakrishnan V S</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile mb-4 md:hidden">Jayakrishnan V S</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8">
+                    Bridging the gap between academic rigor and scalable mobile solutions. Specializing in high-performance Flutter applications and DevOps orchestration.
+                </p>
+<div class="flex flex-wrap gap-4 justify-center md:justify-start">
+<a class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity flex items-center gap-2" href="https://github.com/JKvs007" target="_blank" rel="noopener noreferrer">
+                        View Projects <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<div class="flex items-center gap-4 text-on-surface-variant px-4">
+<a class="hover:text-primary" href="mailto:jayakrishnanvs815@gmail.com"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</div>
+<div class="flex-1 flex justify-center md:justify-end">
+<div class="relative w-64 h-64 md:w-80 md:h-80 group">
+    <!-- Decorative Geometric Accent (Circle) -->
+    <div class="absolute inset-0 bg-surface-container-high rounded-full scale-90 transition-transform duration-500 group-hover:scale-95"></div>
+    <!-- Decorative Frame -->
+    <div class="absolute inset-0 border border-outline-variant rounded-xl -rotate-3 transition-transform duration-500 group-hover:rotate-0"></div>
+    <!-- Profile Image -->
+    <img alt="Jayakrishnan V S Profile" class="relative z-10 w-full h-full object-contain transition-all duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPQDvpNPG2mgIEi-Z08E2BQW-tomgI-2m0EMNA4Nd-_c55dCNGf2t-a46tlp3Z0MM0ixV9Uh5tIyzW4dHVVBxz0NEWxrczotsE5R7CWvfCwTxEbRhknXVxzMdR5PWGWG_Y65bUeiqWAbqiaBcnrOZGmbT8XTAJOM8J6xJ6gxpHmsarlC_qTxW9DEDOKHHEIxPJv_Ld8dyybDbzzco9LDW6XctVFeCB-2vnuA-6JRuVskP15NHIVYQ6gLF7sGRXQe0uG8nkfAJ4KgNN">
+</div>
+</div>
+</section>
+<!-- Summary Section -->
+<section class="bg-surface-container-lowest border-y border-outline-variant py-20" id="about">
+<div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-3 gap-12">
+<div class="md:col-span-1">
+<h2 class="font-headline-md text-headline-md text-primary">Summary</h2>
+<div class="w-12 h-1 bg-primary mt-2"></div>
+</div>
+<div class="md:col-span-2">
+<p class="font-body-lg text-body-lg leading-relaxed text-on-surface-variant">
+                        Hey, I'm a final-year B.Tech Computer Science student and mobile developer from Kerala who loves bringing ideas to life with Flutter. I'm endlessly fascinated by AI—whether I'm tinkering with computer vision and OCR, generating 1950s-style cinematic imagery, or finding ways to make apps smarter. I love pushing the boundaries of what modern tools can do; in fact, this entire website was built purely using AI! When I'm not coding or exploring new tech, you can usually find me leading our campus MuLearn DevOps group and sharing my passion for building with the community.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="max-w-container-max mx-auto px-gutter py-section-gap" id="experience">
+<h2 class="font-headline-md text-headline-md text-center mb-16">Professional Experience</h2>
+<div class="max-w-3xl mx-auto space-y-12">
+<div class="relative pl-8 border-l-2 border-outline-variant">
+<div class="absolute -left-[9px] top-0 w-4 h-4 bg-primary rounded-full"></div>
+<div class="mb-2 flex flex-col md:flex-row md:justify-between items-start md:items-center">
+<h3 class="font-body-lg font-bold text-primary">DevOps IG Lead</h3>
+<span class="text-label-sm font-label-sm text-on-tertiary-container bg-surface-container px-3 py-1 rounded">2025 – Present</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">MuLearn – Rajadhani Institute of Engineering and Technology</p>
+<ul class="space-y-4">
+<li class="flex items-start">
+<span class="custom-bullet"></span>
+<p class="font-body-md">Led the DevOps Interest Group (IG) under MuLearn at RIET, organizing workshops and knowledge-sharing sessions for student developers.</p>
+</li>
+<li class="flex items-start">
+<span class="custom-bullet"></span>
+<p class="font-body-md">Mentored peers in DevOps practices including CI/CD pipelines, version control with Git, and cloud deployment strategies.</p>
+</li>
+<li class="flex items-start">
+<span class="custom-bullet"></span>
+<p class="font-body-md">Coordinated with cross-functional IG teams to build collaborative learning roadmaps and hackathon initiatives.</p>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="bg-surface py-section-gap" id="projects">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-md text-headline-md">Selected Projects</h2>
+<p class="text-on-surface-variant mt-2">Technical implementations and research prototypes</p>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="bento-card p-8 rounded-lg group">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-primary text-on-primary p-3 rounded">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<div class="flex gap-2">
+<span class="skill-chip px-2 py-1 text-[10px] font-bold">FLUTTER</span>
+<span class="skill-chip px-2 py-1 text-[10px] font-bold">FIREBASE</span>
+<span class="skill-chip px-2 py-1 text-[10px] font-bold">ML KIT</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3 group-hover:text-primary transition-colors">VINS - Vehicle Identification</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Real-time number plate detection using device camera with on-device ML inference for instant results and secure vehicle owner communication.</p>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-on-surface-variant text-label-sm">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="">OCR / Firebase Backend</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-label-sm">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="">Anonymous messaging layer</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="bento-card p-8 rounded-lg group">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-secondary text-on-secondary p-3 rounded">
+<span class="material-symbols-outlined">work</span>
+</div>
+<div class="flex gap-2">
+<span class="skill-chip px-2 py-1 text-[10px] font-bold">HTML</span>
+<span class="skill-chip px-2 py-1 text-[10px] font-bold">CSS</span>
+<span class="skill-chip px-2 py-1 text-[10px] font-bold">JS</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3 group-hover:text-primary transition-colors">Opportunity Hub</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Web platform for posting and discovering internship opportunities, enabling students to search and apply with role-based access.</p>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-on-surface-variant text-label-sm">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="">REST API Integration</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-label-sm">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="">Responsive UI/UX</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="max-w-container-max mx-auto px-gutter py-section-gap" id="skills">
+<h2 class="font-headline-md text-headline-md text-center mb-12">Technical Arsenal</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="bento-card p-6 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">smartphone</span>
+<h4 class="font-body-md font-bold mb-2">Mobile</h4>
+<p class="text-label-sm text-on-surface-variant">Flutter, Dart, iOS/Android</p>
+</div>
+<div class="bento-card p-6 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">database</span>
+<h4 class="font-body-md font-bold mb-2">Backend</h4>
+<p class="text-label-sm text-on-surface-variant">Firebase, Firestore, SQL</p>
+</div>
+<div class="bento-card p-6 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">terminal</span>
+<h4 class="font-body-md font-bold mb-2">DevOps</h4>
+<p class="text-label-sm text-on-surface-variant">Git, GitHub, CI/CD</p>
+</div>
+<div class="bento-card p-6 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">code</span>
+<h4 class="font-body-md font-bold mb-2">Languages</h4>
+<p class="text-label-sm text-on-surface-variant">Python, Java, C</p>
+</div>
+</div>
+<div class="mt-12 flex flex-wrap justify-center gap-3">
+<span class="skill-chip px-6 py-2 font-label-sm text-label-sm rounded-lg">REST APIs</span>
+<span class="skill-chip px-6 py-2 font-label-sm text-label-sm rounded-lg">Git &amp; GitHub</span>
+<span class="skill-chip px-6 py-2 font-label-sm text-label-sm rounded-lg">HTML/CSS</span>
+<span class="skill-chip px-6 py-2 font-label-sm text-label-sm rounded-lg">JavaScript</span>
+<span class="skill-chip px-6 py-2 font-label-sm text-label-sm rounded-lg">Cloud Firestore</span>
+<span class="skill-chip px-6 py-2 font-label-sm text-label-sm rounded-lg">ML Kit / OCR</span>
+</div>
+</section>
+<!-- Education & Languages -->
+<section class="bg-surface-container py-section-gap" id="education">
+<div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 gap-16">
+<!-- Education -->
+<div>
+<h2 class="font-headline-md text-headline-md mb-8">Education</h2>
+<div class="space-y-6">
+<div class="bento-card p-8 rounded-lg">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-body-lg font-bold">B.Tech, Computer Science Engineering</h3>
+<span class="text-label-sm text-primary font-bold">CGPA: 8.9</span>
+</div>
+<p class="font-body-md text-on-surface-variant">Rajadhani Institute of Engineering and Technology, Trivandrum</p>
+<p class="text-label-sm text-on-tertiary-container mt-2">2023 – Present</p>
+<div class="mt-8 border-t border-outline-variant pt-6">
+<h4 class="font-label-sm font-bold uppercase mb-4 opacity-60">Recent Training</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="font-body-md">Generative AI Workshop</span>
+<span class="text-label-sm text-on-surface-variant">NIT Calicut, 2026</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md">Web Development (Kshitij)</span>
+<span class="text-label-sm text-on-surface-variant">IIT Kharagpur, 2025</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bento-card p-8 rounded-lg">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-body-lg font-bold">12th Grade</h3>
+</div>
+<p class="font-body-md text-on-surface-variant">St John's School, Anchal, Kollam</p>
+</div>
+</div>
+</div>
+<!-- Languages -->
+<div>
+<h2 class="font-headline-md text-headline-md mb-8">Communication</h2>
+<div class="space-y-6">
+<div class="bento-card p-6 flex justify-between items-center">
+<div>
+<h4 class="font-body-md font-bold">Malayalam</h4>
+<p class="text-label-sm text-on-surface-variant">Native / Primary</p>
+</div>
+<div class="flex gap-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+</div>
+<div class="bento-card p-6 flex justify-between items-center">
+<div>
+<h4 class="font-body-md font-bold">English</h4>
+<p class="text-label-sm text-on-surface-variant">Professional Proficiency</p>
+</div>
+<div class="flex gap-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</div>
+<div class="bento-card p-6 flex justify-between items-center">
+<div>
+<h4 class="font-body-md font-bold">Hindi</h4>
+<p class="text-label-sm text-on-surface-variant">Conversational</p>
+</div>
+<div class="flex gap-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h2 class="font-headline-md text-headline-md mb-6">Volunteering</h2>
+<div class="bento-card p-6">
+<h4 class="font-body-md font-bold">Cybersafety Volunteer</h4>
+<p class="text-label-sm text-on-surface-variant mb-2">CyberDome Kerala Police – Kids Glove Initiative</p>
+<p class="font-body-md text-on-surface-variant">Contributing to cybersafety awareness and digital literacy efforts for children.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-highest border-t border-outline-variant mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center py-base px-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-4 md:mb-0">Jayakrishnan V S</div>
+<p class="font-label-sm text-label-sm text-on-secondary-container order-3 md:order-2">© 2026 Jayakrishnan V S Portfolio. All rights reserved.</p>
+<div class="flex gap-6 font-label-sm text-label-sm order-2 md:order-3 mb-4 md:mb-0">
+<a class="text-on-secondary-container hover:text-primary transition-colors hover:underline" href="https://github.com/JKvs007" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors hover:underline" href="https://www.linkedin.com/in/jkvs007/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors hover:underline" href="mailto:jayakrishnanvs815@gmail.com">Email</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll behavior for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body></html>
