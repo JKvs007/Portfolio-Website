@@ -998,11 +998,39 @@
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('contactSubmitBtn');
     const submitBtnText = document.getElementById('submitBtnText');
-    contactForm.querySelector('input[name="_next"]').value = window.location.href;
+    
+    // Find the email from the form action
+    let targetEmail = 'YOUR_EMAIL@gmail.com';
+    const actionUrl = contactForm.getAttribute('action');
+    if (actionUrl && actionUrl.includes('formsubmit.co/')) {
+      targetEmail = actionUrl.split('formsubmit.co/')[1];
+    }
+
+    const nextInput = contactForm.querySelector('input[name="_next"]');
+    if (nextInput) nextInput.value = window.location.href;
+
     contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('contactName').value;
+      const email = document.getElementById('contactEmail').value;
+      const message = document.getElementById('contactMessage').value;
+      
+      const subject = encodeURIComponent("New message from portfolio — " + name);
+      const body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message);
+      
+      window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+      
       submitBtn.disabled = true;
-      submitBtnText.textContent = 'Sending...';
+      submitBtnText.textContent = 'Opening Mail...';
       submitBtn.style.opacity = '0.7';
+      
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtnText.textContent = 'Send Message';
+        submitBtn.style.opacity = '1';
+        contactForm.reset();
+      }, 2000);
     });
 
     // Resume Modal
